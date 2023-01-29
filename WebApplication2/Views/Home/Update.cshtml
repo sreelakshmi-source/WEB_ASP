@@ -1,0 +1,45 @@
+﻿@model WebApplication2.Models.Detail;
+
+<html>
+<head>
+
+</head>
+<body>
+    <div class="bg-warning card">
+        <div class="bg-danger card-header">
+            <h1 class="fw-bold text-center">UPDATE</h1>
+        </div>
+        <div class="card-body">
+            <div class="row d-flex justify-content-center">
+                <div class="col-4">
+                    <form asp-controller="Home" asp-action="Create" method="post">
+                        <div>
+                            
+                            <input asp-for="Id" class="form-control" type="Hidden" />
+                        </div>
+                        <div>
+                            <label class="form-label">Employee Name</label>
+                            <input asp-for="Name" class="form-control" type="text" />
+                        </div>
+                        <div>
+                            <label class="form-label">Age</label>
+                            <input asp-for="Age" class="form-control" type="number" />
+                        </div>
+                        <div>
+                            <label class="form-label">Place</label>
+                            <input asp-for="Place" class="form-control" type="text" />
+                        </div>
+                        <div class="text-center">
+                      
+                        <div class="pt-2">
+                            <button class="btn btn-primary">Update</button>
+                        </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿@model List<WebApplication2.Models.Detail>
+
+
+
+<html>
+<head>
+   
+</head>
+<body>
+    <div class="bg-warning text-dark card">
+        <div class="bg-danger text-dark card-header">
+            <h2 class="fw-bold text-center text-dark">EMPLOYEE LIST</h2>
+        </div>
+           
+        <table class="arrowes-table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Employee Name</th>
+                    <th>Age</th>
+                    <th>Place</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <div class="card-body">
+            <tbody>
+                @foreach (var item in Model.OrderBy(x => x.Name))
+                {
+                    <tr>
+                        <td>@Html.HiddenFor(m => item.Id) </td>
+                        <td>@item.Name  </td>
+                        <td>@item.Age</td>
+                        <td> @item.Place </td>
+                        <td>
+                            <a asp-action="Update"asp-controller="Home"asp-route-id="@item.Id">Update</a> 
+                        </td>
+                        <td>
+                            <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            </div>
+        </table>
+        
+    </div>
+</body>
+</html>

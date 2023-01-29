@@ -1,0 +1,20 @@
+﻿@model WebApplication2.Models.Detail;
+
+
+<div class="text-center bg-warning Card">
+    <div class="bg-danger card-header">
+        <h2 class="fw-bold text-center"> CONFORM DELETE </h2>
+    </div>
+    <div class="card-body">
+
+        
+        <p class ="text-center "> Are you sure to Delete Employee @Model.Name ...!!!</p>
+        <form asp-controller="Home" asp-action="Create" method="post">
+            <div class="text-center">
+                <button type="submit" asp-controller="Home" asp-action="DeleteConfirm" class="btn btn-danger" asp-route-id="@Model.Id"> Delete </button>
+            </div>
+        </form>
+
+
+    </div>
+</div>
